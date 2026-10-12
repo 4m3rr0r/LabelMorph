@@ -33,7 +33,7 @@ python3 labelmorph.py -h
 ### Generate all mutation types
 
 ```bash
-python3 labelmorph.py -l subdomains.txt -d example.com -w keywords.txt --start 0  --end 1000 -o candidates.txt
+python3 labelmorph.py -l subdomains.txt -d example.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --start 0  --end 1000 -o candidates.txt
 ```
 
 Shuffling, numeric mutations, and keyword insertion/replacement are enabled by default. The `--end` value is inclusive. If the source labels include numbers higher than 1000, increase the range as appropriate.
@@ -56,7 +56,7 @@ python3 labelmorph.py -l subdomains.txt -d example.com \
 
 ```bash
 python3 labelmorph.py -l subdomains.txt -d example.com \
-  -w keywords.txt --no-numbers -o keyword_candidates.txt
+  -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --no-numbers -o keyword_candidates.txt
 ```
 
 ### CLI options
